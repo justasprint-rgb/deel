@@ -153,8 +153,8 @@ export default function Pitch() {
           </div>
         </div>
         <p className="lead dim">
-          The point Artan made was "execution especially using AI." Not AI as decoration. AI as the thing that
-          actually does the cognitive labor, on both sides: finding the opportunity, and acting on it.
+          Not AI as decoration. AI as the thing that actually does the cognitive labor: finding the
+          opportunity and acting on it, so a human receives a routed play rather than a ranked spreadsheet.
         </p>
       </section>
 
@@ -183,9 +183,66 @@ export default function Pitch() {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section id="how" className="sec rv">
+        <div className="seckick">06 / HOW IT WORKS</div>
+        <h2>Three steps. One expansion play, ready to route.</h2>
+        <p className="lead">
+          The engine surfaces accounts that are signaling readiness for the next product, then uses Grok to
+          reason through the play and draft it for immediate action.
+        </p>
+        <div className="steps">
+          <div className="step">
+            <div className="stepnum">01</div>
+            <div className="stepbody">
+              <div className="steptitle">Select an account from the ranked list</div>
+              <p className="stepdesc">
+                The left panel ranks accounts by expansion-readiness score (0 to 100). Each card shows the
+                account's industry, headcount, and the products it already uses. Fired signals appear as
+                chips below each card, pointing to which next product they imply. HOT accounts have multiple
+                signals firing simultaneously. QUIET accounts have none, and the generate button is
+                disabled for them, so you never run a play on an account that is not ready.
+              </p>
+            </div>
+          </div>
+          <div className="step">
+            <div className="stepnum">02</div>
+            <div className="stepbody">
+              <div className="steptitle">Read the signals panel</div>
+              <p className="stepdesc">
+                The right panel shows the account's key numbers (contractors, EOR seats, recent full-time
+                hires, QoQ growth) and lists every fired signal with its exact detail and the product it
+                implies. Each signal is grounded in a usage event: a contractor cluster forming in one country,
+                a batch of contractors converting to full-time, payroll running across many countries in
+                separate flows, a visa-dependent hire, or headcount growing past the spreadsheet threshold.
+              </p>
+            </div>
+          </div>
+          <div className="step">
+            <div className="stepnum">03</div>
+            <div className="stepbody">
+              <div className="steptitle">Generate the expansion play with Grok</div>
+              <p className="stepdesc">
+                Clicking Generate sends the account's real signal profile to Grok via a secure server
+                route. Grok reasons over the data and returns a structured play with five sections: the
+                single next product and a one-line why, the specific usage events that justify the timing,
+                the motion (who acts and what they say), a rough ARR estimate with arithmetic shown, and
+                one metric to confirm the play is working. The output is ready to route to an account
+                manager, a customer success lead, or an AE immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="howfooter">
+          Account rows are illustrative. The signal logic, the scoring model, and the Grok reasoning are
+          production-real. A live deployment replaces the synthetic rows with Deel's actual product-usage
+          events.
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="cta" className="sec rv cta">
-        <div className="seckick">06 / SEE IT RUN</div>
+        <div className="seckick">07 / SEE IT RUN</div>
         <h2>The thinking is the easy half. Here is the working half.</h2>
         <p className="lead">
           The live engine ranks a set of illustrative Deel-style accounts by expansion-readiness, shows the
@@ -197,7 +254,7 @@ export default function Pitch() {
 
       <footer className="foot">
         <span>Expansion Signal Engine · problem found, solution built, in under 24 hours</span>
-        <span className="name">[YOUR NAME]</span>
+        <span className="name">SRINIVAS PAI, FUTURE GHOSTBUSTER :)</span>
       </footer>
     </div>
   );
@@ -210,6 +267,7 @@ const SECTIONS = [
   { id: "impact", label: "Impact" },
   { id: "ai", label: "AI" },
   { id: "speed", label: "Speed" },
+  { id: "how", label: "How it works" },
   { id: "cta", label: "Live tool" },
 ];
 
@@ -295,6 +353,13 @@ const CSS = `
 
 .foot { max-width:920px; margin:0 auto; padding:40px 28px 70px; border-top:1px solid var(--border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:var(--mono); font-size:11px; color:var(--text3); }
 .foot .name { color:var(--text2); letter-spacing:1px; }
+
+.steps { display:flex; flex-direction:column; gap:0; margin:28px 0 18px; }
+.step { display:grid; grid-template-columns:56px 1fr; gap:20px; padding:22px 0; border-top:1px solid var(--border); align-items:start; }
+.stepnum { font-family:var(--mono); font-size:28px; font-weight:600; color:var(--accent); opacity:.45; line-height:1; padding-top:4px; }
+.steptitle { font-size:16px; font-weight:700; color:#fff; margin-bottom:10px; }
+.stepdesc { font-size:13.5px; color:var(--text2); line-height:1.7; margin:0; }
+.howfooter { font-family:var(--mono); font-size:11px; color:var(--text3); padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-radius:8px; line-height:1.6; }
 
 @media (max-width:760px){
   .hero h1 { font-size:42px; }
