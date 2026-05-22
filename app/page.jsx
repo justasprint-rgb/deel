@@ -161,7 +161,7 @@ export default function Page() {
 
       <footer className="foot">
         <span>Expansion Signal Engine · event-driven cross-sell intelligence · illustrative data, production-real logic</span>
-        <span className="name">[YOUR NAME]</span>
+        <span className="name">SRINIVAS PAI, FUTURE GHOSTBUSTER :)</span>
       </footer>
     </div>
   );
