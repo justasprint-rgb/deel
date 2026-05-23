@@ -11,8 +11,8 @@
 
 export const runtime = "nodejs";
 
-const MODEL = "grok-4"; // swap if your xAI key targets a different model string
-const XAI_URL = "https://api.x.ai/v1/chat/completions";
+const MODEL = "llama-3.3-70b-versatile";
+const XAI_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 const SYS = "You are an expansion and retention strategist embedded in Deel's operations team. You write tight, senior, specific output. Never use em dashes; use a colon, comma, or period instead.";
 
