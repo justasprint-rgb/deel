@@ -131,15 +131,15 @@ export default function Pitch() {
       {/* AI */}
       <section id="ai" className="sec rv">
         <div className="seckick">04 / AI, IN BUILDING AND IN EXECUTION</div>
-        <h2>AI did the work to find this, and AI does the work inside the product.</h2>
+        <h2>I used AI to find this. The product uses AI to act on it.</h2>
         <div className="split">
           <div className="splitcol">
             <div className="splittag build">IN THE BUILDING</div>
             <ul className="ailist">
-              <li>Classified 659 scraped reviews into categories and corridors</li>
-              <li>Ran competitive research across the EOR field (Rippling, Remote, Papaya, G-P)</li>
-              <li>Built the risk and signal models that rank accounts</li>
-              <li>Wrote and shipped this working application</li>
+              <li>Scraped and classified 659 Trustpilot reviews into payment corridors and complaint categories</li>
+              <li>Cross-referenced Papaya, Rippling, Remote and G-P to map where competitors have already solved Deel's structural gaps</li>
+              <li>Designed the risk model that surfaces GB as the critical Safeguard seam, not the US, which is the non-obvious finding</li>
+              <li>Scoped, built and deployed this working application in under 24 hours</li>
             </ul>
           </div>
           <div className="splitcol">
